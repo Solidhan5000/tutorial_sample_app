@@ -15,3 +15,5 @@
 /tmp
 .DS_Store
 .idea
+.idea/workspace.xml
+tutorial_sample_app.iws
