@@ -1,6 +1,8 @@
 TutorialSampleApp::Application.routes.draw do
   root :to => 'static_pages#home'                   # the standard root route
 
+  match '/signup', to: 'users#new'  # automatically creates: contact
+
   match '/help',    to: 'static_pages#help'     # automatically creates: help_path
   match '/about',   to: 'static_pages#about'    # automatically creates: about_path
   match '/contact', to: 'static_pages#contact'  # automatically creates: contact
