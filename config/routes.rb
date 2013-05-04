@@ -1,11 +1,14 @@
 TutorialSampleApp::Application.routes.draw do
+  resources :users                   # loads the users model
+
   root :to => 'static_pages#home'                   # the standard root route
 
-  match '/signup', to: 'users#new'  # automatically creates: contact
+  match '/signup',  to: 'users#new'   # automatically creates: signup_path
+  match '/user',    to: 'user#show'   # automatically creates: user_path
 
   match '/help',    to: 'static_pages#help'     # automatically creates: help_path
   match '/about',   to: 'static_pages#about'    # automatically creates: about_path
-  match '/contact', to: 'static_pages#contact'  # automatically creates: contact
+  match '/contact', to: 'static_pages#contact'  # automatically creates: contact_path
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
